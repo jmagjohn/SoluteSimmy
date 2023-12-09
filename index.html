@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 20px;
+            background-image: url("{{ url_for('static', filename='background.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .content-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-box">
+        <h1>Welcome to John's Solubility ML model!</h1>
+        <p>Let's predict some solubility WOOOOO!</p>
+        <a href="{{ url_for('input') }}"><button>Go to Input Page</button></a>
+    </div>
+</body>
+</html>
